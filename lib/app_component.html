@@ -2,8 +2,8 @@
     <glyph icon="lightbulb_outline"></glyph>
     Get new ideas
 </material-button>
-<ul>
-    <li *ngFor="let item of names">
+<material-list>
+    <material-list-item *ngFor="let item of names">
         {{item}}.com
-    </li>
-</ul>
+    </material-list-item>
+</material-list>
