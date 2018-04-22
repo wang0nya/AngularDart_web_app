@@ -9,10 +9,11 @@ import 'package:english_words/english_words.dart';
   selector: 'my-app',
   styleUrls: const ['app_component.css'],
   templateUrl: 'app_component.html',
-  directives: const [materialDirectives],
+  directives: const [materialDirectives,
+  CORE_DIRECTIVES],
   providers: const [materialProviders],
 )
 class AppComponent {
-  WordPair name = generateWordPairs().first;
-  AppComponent() { print('name: $name'); }
+  List<WordPair> names = generateWordPairs().take(5).toList();
+  AppComponent() { print('names: $names'); }
 }

@@ -2,4 +2,8 @@
     <glyph icon="lightbulb_outline"></glyph>
     Get new ideas
 </material-button>
-<p>{{name}}.com</p>
+<ul>
+    <li *ngFor="let item of names">
+        {{item}}.com
+    </li>
+</ul>
