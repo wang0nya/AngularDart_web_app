@@ -16,4 +16,7 @@ import 'package:english_words/english_words.dart';
 class AppComponent {
   List<WordPair> names = generateWordPairs().take(5).toList();
   AppComponent() { print('names: $names'); }
+  void generateNames() {
+    names = generateWordPairs().take(5).toList();
+  }
 }
