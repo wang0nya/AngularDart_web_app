@@ -1,5 +1,6 @@
 import 'package:angular/angular.dart';
 import 'package:angular_components/angular_components.dart';
+import 'package:english_words/english_words.dart';
 
 // AngularDart info: https://webdev.dartlang.org/angular
 // Components info: https://webdev.dartlang.org/components
@@ -12,4 +13,6 @@ import 'package:angular_components/angular_components.dart';
   providers: const [materialProviders],
 )
 class AppComponent {
+  WordPair name = generateWordPairs().first;
+  AppComponent() { print('name: $name'); }
 }
