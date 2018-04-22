@@ -4,6 +4,6 @@
 </material-button>
 <material-list>
     <material-list-item *ngFor="let item of names">
-        {{item}}.com
+        <span class="first">{{item.first}}</span>{{item.second}}.com
     </material-list-item>
 </material-list>
