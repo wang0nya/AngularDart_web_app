@@ -13,10 +13,13 @@ import 'package:english_words/english_words.dart';
   CORE_DIRECTIVES],
   providers: const [materialProviders],
 )
-class AppComponent {
-  List<WordPair> names = generateWordPairs().take(5).toList();
-  AppComponent() { print('names: $names'); }
+class AppComponent implements OnInit {
+  var names = <WordPair>[];
   void generateNames() {
     names = generateWordPairs().take(5).toList();
+  }
+  @override
+  ngOnInit() {
+    generateNames();
   }
 }
